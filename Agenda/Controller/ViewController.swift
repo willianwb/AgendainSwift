@@ -19,16 +19,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let pessoa = Pessoa(context: context)
-        pessoa.name = "Flobervaldo Antares Montanha"
-        let pessoa2 = Pessoa(context: context)
-        pessoa2.name = "JOAO Antares Montanha"
-        let pessoa3 = Pessoa(context: context)
-        pessoa3.name = "JOAQUINO Antares Montanha"
+//        let pessoa = Pessoa(context: context)
+//        pessoa.name = "Flobervaldo Antares Montanha"
+//        let pessoa2 = Pessoa(context: context)
+//        pessoa2.name = "JOAO Antares Montanha"
+//        let pessoa3 = Pessoa(context: context)
+//        pessoa3.name = "JOAQUINO Antares Montanha"
         
-        ListaPessoas.addPessoa(pessoa)
-        ListaPessoas.addPessoa(pessoa2)
-        ListaPessoas.addPessoa(pessoa3)
+//        ListaPessoas.addPessoa(pessoa)
+//        ListaPessoas.addPessoa(pessoa2)
+//        ListaPessoas.addPessoa(pessoa3)
         
         do {
             try context.save()
@@ -49,7 +49,6 @@ class ViewController: UIViewController {
         
         
     }
-    //DUVIDA SOBRE AONDE SALVAR E AONDE BUSCAR O ARQUIVO
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ListarPessoas"{

@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import CoreData
+
+
+
+class SaveLoadPessoasViewModel{
+    
+
+    
+}
