@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Endereco" representedClassName="Endereco" syncable="YES" codeGenerationType="class">
+        <attribute name="cep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="enderecos" inverseEntity="Pessoa" syncable="YES"/>
+    </entity>
+    <entity name="Pessoa" representedClassName="Pessoa" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="enderecos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Endereco" inverseName="pessoa" inverseEntity="Endereco" syncable="YES"/>
+        <relationship name="fones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Phone" inverseName="pessoa" inverseEntity="Phone" syncable="YES"/>
+    </entity>
+    <entity name="Phone" representedClassName="Phone" syncable="YES" codeGenerationType="class">
+        <attribute name="ddd" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ddi" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="fones" inverseEntity="Pessoa" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Endereco" positionX="279.11328125" positionY="-81.046875" width="128" height="103"/>
+        <element name="Pessoa" positionX="87.8125" positionY="-267.59765625" width="128" height="133"/>
+        <element name="Phone" positionX="-183.0078125" positionY="-158.1328125" width="128" height="103"/>
+    </elements>
 </model>
