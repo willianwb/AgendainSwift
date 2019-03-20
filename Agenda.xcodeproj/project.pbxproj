@@ -17,6 +17,7 @@
 		57E8ED1622404BDA00BC6842 /* PessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1522404BDA00BC6842 /* PessoasViewModel.swift */; };
 		57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1722404C3000BC6842 /* Pessoas.swift */; };
 		57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */; };
+		6E8CADAD2242CEBD004AF3C1 /* AddContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		57E8ED1522404BDA00BC6842 /* PessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PessoasViewModel.swift; sourceTree = "<group>"; };
 		57E8ED1722404C3000BC6842 /* Pessoas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoas.swift; sourceTree = "<group>"; };
 		57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadPessoasViewModel.swift; sourceTree = "<group>"; };
+		6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				570943DD224045A000C4C610 /* ViewController.swift */,
 				570943DB224045A000C4C610 /* AppDelegate.swift */,
 				57E8ED132240499000BC6842 /* TableViewController.swift */,
+				6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */,
+				6E8CADAD2242CEBD004AF3C1 /* AddContatoViewController.swift in Sources */,
 				570943E4224045A000C4C610 /* Agenda.xcdatamodeld in Sources */,
 				570943DE224045A000C4C610 /* ViewController.swift in Sources */,
 				57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */,

@@ -89,5 +89,12 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "add"{
+            let next = segue.destination as! AddContatoViewController
+            
+        }
+    }
 
 }
