@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoadContext()
         // Do any additional setup after loading the view, typically from a nib.
         
 //        let pessoa = Pessoa(context: context)
@@ -30,21 +31,26 @@ class ViewController: UIViewController {
 //        ListaPessoas.addPessoa(pessoa2)
 //        ListaPessoas.addPessoa(pessoa3)
         
-        do {
-            try context.save()
-        } catch  {
-            print("ERRO AO SALVAR O CONTEXTO: \(error)")
-        }
         
-        
+    }
+    
+    func LoadContext(){
         let req : NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
         print(req)
-        
         
         do {
             try ListaPessoas.pessoasViewModel.ListaPessoas = context.fetch(req)
         } catch  {
             print("ERRO AO LER O CONTEXTO: \(error)")
+        }
+        
+    }
+    
+    func SaveContext(){
+        do {
+            try context.save()
+        } catch  {
+            print("ERRO AO SALVAR O CONTEXTO: \(error)")
         }
         
         
