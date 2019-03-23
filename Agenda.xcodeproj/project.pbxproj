@@ -17,6 +17,8 @@
 		57E8ED1622404BDA00BC6842 /* PessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1522404BDA00BC6842 /* PessoasViewModel.swift */; };
 		57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1722404C3000BC6842 /* Pessoas.swift */; };
 		57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */; };
+		57EA72A12245BA5800E388E1 /* EditarEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA72A02245BA5800E388E1 /* EditarEditViewController.swift */; };
+		57FE13F32243108300389DA4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE13F22243108300389DA4 /* EditViewController.swift */; };
 		6E8CADAD2242CEBD004AF3C1 /* AddContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		57E8ED1522404BDA00BC6842 /* PessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PessoasViewModel.swift; sourceTree = "<group>"; };
 		57E8ED1722404C3000BC6842 /* Pessoas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoas.swift; sourceTree = "<group>"; };
 		57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadPessoasViewModel.swift; sourceTree = "<group>"; };
+		57EA72A02245BA5800E388E1 /* EditarEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarEditViewController.swift; sourceTree = "<group>"; };
+		57FE13F22243108300389DA4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 				570943DB224045A000C4C610 /* AppDelegate.swift */,
 				57E8ED132240499000BC6842 /* TableViewController.swift */,
 				6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */,
+				57FE13F22243108300389DA4 /* EditViewController.swift */,
+				57EA72A02245BA5800E388E1 /* EditarEditViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 				570943DC224045A000C4C610 /* AppDelegate.swift in Sources */,
 				57E8ED1622404BDA00BC6842 /* PessoasViewModel.swift in Sources */,
 				57E8ED142240499000BC6842 /* TableViewController.swift in Sources */,
+				57FE13F32243108300389DA4 /* EditViewController.swift in Sources */,
+				57EA72A12245BA5800E388E1 /* EditarEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

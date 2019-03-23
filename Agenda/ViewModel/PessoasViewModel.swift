@@ -12,11 +12,11 @@ import CoreData
 
 class PessoasViewModel{
 
-    var pessoasViewModel: Pessoas
+    let pessoasViewModel: Pessoas
     
 
     
-    var ListaPessoas: [Pessoa]{
+    var ListaPessoas: [Pessoa] {
         return pessoasViewModel.ListaPessoas
     }
     

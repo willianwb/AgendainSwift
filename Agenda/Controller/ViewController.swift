@@ -11,13 +11,13 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    var ListaPessoas = PessoasViewModel()
+    var listaPessoas = PessoasViewModel()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoadContext()
+        loadContext()
         // Do any additional setup after loading the view, typically from a nib.
         
 //        let pessoa = Pessoa(context: context)
@@ -34,12 +34,12 @@ class ViewController: UIViewController {
         
     }
     
-    func LoadContext(){
+    func loadContext(){
         let req : NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
         print(req)
         
         do {
-            try ListaPessoas.pessoasViewModel.ListaPessoas = context.fetch(req)
+            try listaPessoas.pessoasViewModel.ListaPessoas = context.fetch(req)
         } catch  {
             print("ERRO AO LER O CONTEXTO: \(error)")
         }
@@ -59,7 +59,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ListarPessoas"{
             let next = segue.destination as! TableViewController
-            next.ListaPessoas = ListaPessoas
+            next.listaPessoas = listaPessoas
+            next.controllerInicial = self
             
         }
     }
