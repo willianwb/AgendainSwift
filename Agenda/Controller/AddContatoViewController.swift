@@ -41,7 +41,7 @@ class AddContatoViewController: UIViewController {
         p1.sex = sex
         p1.endereco = e1
         p1.site = NSURL(string: site.text!)! as URL
-        p1.addToFones(phone)
+        p1.fones = phone
         return p1
     }
     

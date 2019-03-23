@@ -99,6 +99,7 @@ class TableViewController: UITableViewController {
         }else if segue.identifier == "perfil"{
             let next = segue.destination as! EditViewController
             next.usuario = listaPessoas.pessoasViewModel.ListaPessoas[tableView.indexPathForSelectedRow?.row ?? 0]
+            next.tableViewAnterior = self
             
         }
     }
