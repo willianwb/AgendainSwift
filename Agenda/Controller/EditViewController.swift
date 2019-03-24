@@ -28,14 +28,12 @@ class EditViewController: UIViewController {
     @IBOutlet weak var gotosite: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let path:String = (usuario?.site!.path)!
-        
         nome.text = usuario?.name
         sexo.text = usuario?.sex
         rua.text = usuario?.endereco?.street
         numero.text = usuario?.endereco?.number
         cep.text = usuario?.endereco?.cep
-        site.text = path
+        site.text = usuario?.site?.absoluteString
         phone.text = usuario?.fones?.number
         // como percorrer vetor de nsset
 //        for i in (usuario?.fones)!{
@@ -120,6 +118,7 @@ class EditViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "webview"{
             let next = segue.destination as! WebViewController
+            next.myURL = usuario?.site
             
         }
     }

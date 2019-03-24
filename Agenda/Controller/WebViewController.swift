@@ -10,12 +10,13 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKUIDelegate {
+    
+    var myURL: URL?
 
     @IBOutlet weak var webviewkit: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let myURL = URL(string:"https://www.apple.com")
+
         let myRequest = URLRequest(url: myURL!)
         webviewkit.load(myRequest)
         // Do any additional setup after loading the view.
