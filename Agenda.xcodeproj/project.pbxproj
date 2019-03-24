@@ -18,6 +18,7 @@
 		57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1722404C3000BC6842 /* Pessoas.swift */; };
 		57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */; };
 		57FE13F32243108300389DA4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE13F22243108300389DA4 /* EditViewController.swift */; };
+		6E8782242246FF6D00B95859 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8782232246FF6D00B95859 /* WebViewController.swift */; };
 		6E8CADAD2242CEBD004AF3C1 /* AddContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		57E8ED1722404C3000BC6842 /* Pessoas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoas.swift; sourceTree = "<group>"; };
 		57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadPessoasViewModel.swift; sourceTree = "<group>"; };
 		57FE13F22243108300389DA4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		6E8782232246FF6D00B95859 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				57E8ED132240499000BC6842 /* TableViewController.swift */,
 				6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */,
 				57FE13F22243108300389DA4 /* EditViewController.swift */,
+				6E8782232246FF6D00B95859 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */,
 				6E8CADAD2242CEBD004AF3C1 /* AddContatoViewController.swift in Sources */,
 				570943E4224045A000C4C610 /* Agenda.xcdatamodeld in Sources */,
+				6E8782242246FF6D00B95859 /* WebViewController.swift in Sources */,
 				570943DE224045A000C4C610 /* ViewController.swift in Sources */,
 				57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */,
 				570943DC224045A000C4C610 /* AppDelegate.swift in Sources */,

@@ -251,11 +251,18 @@
                         <viewLayoutGuide key="safeArea" id="gis-gW-IOg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="cX1-2r-HP3">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="fQI-zG-23s">
-                            <connections>
-                                <action selector="saveEditUsuario:" destination="LfL-1f-HGM" id="0yS-fq-Ib9"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="save" id="fQI-zG-23s">
+                                <connections>
+                                    <action selector="saveEditUsuario:" destination="LfL-1f-HGM" id="0yS-fq-Ib9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="GoToSite" id="lVm-Nj-DKI">
+                                <connections>
+                                    <segue destination="h4h-yN-Kfo" kind="show" identifier="webview" id="pfT-4h-D0H"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="cep" destination="E1Q-SD-jCS" id="jpI-vP-HhY"/>
@@ -270,6 +277,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bf-kL-5MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3737" y="910"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="4bb-KX-8qm">
+            <objects>
+                <viewController id="h4h-yN-Kfo" customClass="WebViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJe-ZT-gYL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-py-Mgy">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ab7-lb-SEB" firstAttribute="bottom" secondItem="LdE-py-Mgy" secondAttribute="bottom" id="Ki3-tf-NwI"/>
+                            <constraint firstItem="ab7-lb-SEB" firstAttribute="trailing" secondItem="LdE-py-Mgy" secondAttribute="trailing" id="YOy-SB-wBs"/>
+                            <constraint firstItem="LdE-py-Mgy" firstAttribute="leading" secondItem="ab7-lb-SEB" secondAttribute="leading" id="dZ2-tJ-nxY"/>
+                            <constraint firstItem="LdE-py-Mgy" firstAttribute="top" secondItem="ab7-lb-SEB" secondAttribute="top" id="vlp-q4-m0t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ab7-lb-SEB"/>
+                    </view>
+                    <connections>
+                        <outlet property="webviewkit" destination="LdE-py-Mgy" id="cfA-1f-2zT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3JG-9F-oRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4702.5" y="909.50704225352115"/>
         </scene>
         <!--Adicionar-->
         <scene sceneID="D2h-Ra-YlZ">

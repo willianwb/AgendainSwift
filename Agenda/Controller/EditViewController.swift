@@ -116,5 +116,12 @@ class EditViewController: UIViewController {
         
         self.present(alerterro,animated: true,completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "webview"{
+            let next = segue.destination as! WebViewController
+            
+        }
+    }
 
 }
