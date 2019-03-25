@@ -9,8 +9,12 @@
 import UIKit
 import CoreData
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var btnAddPic: UIView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var tableViewAnterior: TableViewController?
     
@@ -25,7 +29,6 @@ class EditViewController: UIViewController {
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var site: UITextField!
     
-    @IBOutlet weak var gotosite: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         nome.text = usuario?.name
@@ -95,6 +98,47 @@ class EditViewController: UIViewController {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //return The number of rows in section.
+        return (usuario?.imagensRelation?.count)!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //return A configured cell object.
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
+        
+        for img in (usuario?.imagensRelation)!{
+            let imagem = img as! Imagens
+            cell.usuarioImageView.image = UIImage(data: imagem.imagem!)
+
+        }
+        return cell
+    }
+    
+    @IBAction func importImage(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        present(image, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            let img = Imagens(context: context)
+            img.imagem = image.pngData()
+            usuario?.addToImagensRelation(img)
+        }else{
+            //mensagem de erro caso falhe
+        }
+        
+        self.dismiss(animated: true, completion:    nil)
+    }
+    
+    
+    
     func alertSuccess(){
         let alert = UIAlertController(title: "Salvo!", message: "Com Sucesso!", preferredStyle: UIAlertController.Style.alert)
         
@@ -114,6 +158,7 @@ class EditViewController: UIViewController {
         
         self.present(alerterro,animated: true,completion: nil)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "webview"{

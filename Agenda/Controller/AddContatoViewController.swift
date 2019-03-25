@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddContatoViewController: UIViewController {
+class AddContatoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var genero: UITextField!
@@ -18,6 +18,9 @@ class AddContatoViewController: UIViewController {
     @IBOutlet weak var telefone: UITextField!
     @IBOutlet weak var btnSAVE: UIBarButtonItem!
     @IBOutlet weak var site: UITextField!
+    @IBOutlet weak var btnImportImage: UIButton!
+    
+    @IBOutlet weak var adduserImageView: UIImageView!
     
     var tableViewAnterior: TableViewController!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -28,10 +31,12 @@ class AddContatoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func createUsuario(nome: String,sex: String,id: Int,fone: String, cep: String, num: String, rua: String) -> Pessoa{
+    func createUsuario(nome: String,sex: String,id: Int,fone: String, cep: String, num: String, rua: String, imagem: UIImage) -> Pessoa{
         let p1 = Pessoa(context: context)
         let e1 = Endereco(context: context)
         let phone = Phone(context: context)
+        let image = Imagens(context: context)
+        image.imagem = imagem.pngData()
         e1.cep = cep
         e1.number = num
         e1.street = rua
@@ -42,11 +47,12 @@ class AddContatoViewController: UIViewController {
         p1.endereco = e1
         p1.site = NSURL(string: site.text!)! as URL
         p1.fones = phone
+        p1.addToImagensRelation(image)
         return p1
     }
     
     func checkNull()-> Bool {
-        if (nome.text! == "" || genero.text! == "" || rua.text == "" || numero.text == "" || cep.text == "" || telefone.text == "" || site.text == ""){
+        if (nome.text! == "" || genero.text! == "" || rua.text == "" || numero.text == "" || cep.text == "" || telefone.text == "" || site.text == "" || adduserImageView.image == nil){
             return false
         }
         return true
@@ -55,7 +61,7 @@ class AddContatoViewController: UIViewController {
     
     @IBAction func SaveButton(_ sender: Any) {
         if ( checkNull()){
-            let pessoa = createUsuario(nome: nome.text!, sex: genero.text!, id: tableViewAnterior.listaPessoas.countPessoas, fone: telefone.text!, cep: cep.text!, num: numero.text!, rua: rua.text!)
+            let pessoa = createUsuario(nome: nome.text!, sex: genero.text!, id: tableViewAnterior.listaPessoas.countPessoas, fone: telefone.text!, cep: cep.text!, num: numero.text!, rua: rua.text!, imagem: adduserImageView.image!)
             tableViewAnterior.listaPessoas.addPessoa(pessoa)
             alertSuccess()
             saveContext()
@@ -97,6 +103,27 @@ class AddContatoViewController: UIViewController {
         
         
     }
+    
+    @IBAction func importImage(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+
+        image.sourceType = .photoLibrary
+        image.allowsEditing = false
+        present(image, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            adduserImageView.image = image
+        }else{
+            //mensagem de erro caso falhe
+        }
+
+        self.dismiss(animated: true, completion:    nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
