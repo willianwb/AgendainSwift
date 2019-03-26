@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import MapKit
 
-class EditViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var btnAddPic: UIView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -19,15 +20,20 @@ class EditViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var tableViewAnterior: TableViewController?
     
     var usuario : Pessoa?
+    var imagens : [UIImage] = []
     @IBOutlet weak var sexo: UITextField!
     
-
+    @IBOutlet weak var imagaddEdit: UIImageView!
+    
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var cep: UITextField!
     @IBOutlet weak var numero: UITextField!
     @IBOutlet weak var rua: UITextField!
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var site: UITextField!
+    
+    //variaveis do mapa
+    @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +44,15 @@ class EditViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cep.text = usuario?.endereco?.cep
         site.text = usuario?.site?.absoluteString
         phone.text = usuario?.fones?.number
+//        aLL objects
+//        sortedarray
+        
+        for img in (usuario?.imagensRelation)!{
+            let imagem = img as! Imagens
+            imagens.append(UIImage(data: imagem.imagem!)!)
+        
+            }
+        //iniciaMAPVIEW()
         // como percorrer vetor de nsset
 //        for i in (usuario?.fones)!{
 //            let fone = i as! Phone
@@ -108,11 +123,12 @@ class EditViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
         
-        for img in (usuario?.imagensRelation)!{
-            let imagem = img as! Imagens
-            cell.usuarioImageView.image = UIImage(data: imagem.imagem!)
-
-        }
+//        for img in (usuario?.imagensRelation)!{
+//            let imagem = img as! Imagens
+//            cell.usuarioImageView.image = UIImage(data: imagem.imagem!)
+//
+//        }
+        cell.usuarioImageView.image = imagens[indexPath.row]
         return cell
     }
     
@@ -128,6 +144,7 @@ class EditViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             let img = Imagens(context: context)
+            imagaddEdit.image = image
             img.imagem = image.pngData()
             usuario?.addToImagensRelation(img)
         }else{
@@ -165,6 +182,12 @@ class EditViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let next = segue.destination as! WebViewController
             next.myURL = usuario?.site
             
+        }else if segue.identifier == "map"{
+            let next = segue.destination as! MapViewController
+            next.nome = usuario?.name
+            next.rua = usuario?.endereco?.street
+            next.numero = usuario?.endereco?.number
+            next.cep = usuario?.endereco?.cep
         }
     }
 

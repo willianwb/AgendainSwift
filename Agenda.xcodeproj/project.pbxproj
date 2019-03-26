@@ -13,6 +13,8 @@
 		570943E4224045A000C4C610 /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 570943E2224045A000C4C610 /* Agenda.xcdatamodeld */; };
 		570943E6224045A200C4C610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 570943E5224045A200C4C610 /* Assets.xcassets */; };
 		570943E9224045A200C4C610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570943E7224045A200C4C610 /* LaunchScreen.storyboard */; };
+		5741D26D2249A60700BA903B /* Painel-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5741D26C2249A60700BA903B /* Painel-02.jpg */; };
+		5741D26F2249A91900BA903B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5741D26E2249A91900BA903B /* MapViewController.swift */; };
 		57E8ED142240499000BC6842 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED132240499000BC6842 /* TableViewController.swift */; };
 		57E8ED1622404BDA00BC6842 /* PessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1522404BDA00BC6842 /* PessoasViewModel.swift */; };
 		57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1722404C3000BC6842 /* Pessoas.swift */; };
@@ -32,6 +34,8 @@
 		570943E5224045A200C4C610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		570943E8224045A200C4C610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		570943EA224045A200C4C610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5741D26C2249A60700BA903B /* Painel-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Painel-02.jpg"; sourceTree = "<group>"; };
+		5741D26E2249A91900BA903B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		57E8ED132240499000BC6842 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		57E8ED1522404BDA00BC6842 /* PessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PessoasViewModel.swift; sourceTree = "<group>"; };
 		57E8ED1722404C3000BC6842 /* Pessoas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoas.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				6E95D0D222494C0F0037B176 /* CollectionViewCell.swift */,
 				570943E7224045A200C4C610 /* LaunchScreen.storyboard */,
 				570943E5224045A200C4C610 /* Assets.xcassets */,
+				5741D26C2249A60700BA903B /* Painel-02.jpg */,
 				570943DF224045A000C4C610 /* Main.storyboard */,
 			);
 			path = View;
@@ -102,6 +107,7 @@
 				57E8ED132240499000BC6842 /* TableViewController.swift */,
 				6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */,
 				57FE13F22243108300389DA4 /* EditViewController.swift */,
+				5741D26E2249A91900BA903B /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5741D26D2249A60700BA903B /* Painel-02.jpg in Resources */,
 				570943E9224045A200C4C610 /* LaunchScreen.storyboard in Resources */,
 				570943E6224045A200C4C610 /* Assets.xcassets in Resources */,
 				570943E1224045A000C4C610 /* Main.storyboard in Resources */,
@@ -201,6 +208,7 @@
 				570943DE224045A000C4C610 /* ViewController.swift in Sources */,
 				57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */,
 				570943DC224045A000C4C610 /* AppDelegate.swift in Sources */,
+				5741D26F2249A91900BA903B /* MapViewController.swift in Sources */,
 				57E8ED1622404BDA00BC6842 /* PessoasViewModel.swift in Sources */,
 				57E8ED142240499000BC6842 /* TableViewController.swift in Sources */,
 				57FE13F32243108300389DA4 /* EditViewController.swift in Sources */,
