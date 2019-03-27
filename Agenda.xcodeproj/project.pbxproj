@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5706E662224C3BAD00D4534B /* titanic-icones-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 5706E661224C3BAD00D4534B /* titanic-icones-03.png */; };
 		570943DC224045A000C4C610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570943DB224045A000C4C610 /* AppDelegate.swift */; };
 		570943DE224045A000C4C610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570943DD224045A000C4C610 /* ViewController.swift */; };
 		570943E1224045A000C4C610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570943DF224045A000C4C610 /* Main.storyboard */; };
@@ -20,13 +21,13 @@
 		57E8ED1822404C3000BC6842 /* Pessoas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED1722404C3000BC6842 /* Pessoas.swift */; };
 		57E8ED382240642900BC6842 /* SaveLoadPessoasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */; };
 		57FE13F32243108300389DA4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE13F22243108300389DA4 /* EditViewController.swift */; };
-		6E86489E224BF0B70069D2DC /* titanic-icones-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E86489D224BF0B60069D2DC /* titanic-icones-03.png */; };
 		6E8782242246FF6D00B95859 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8782232246FF6D00B95859 /* WebViewController.swift */; };
 		6E8CADAD2242CEBD004AF3C1 /* AddContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */; };
 		6E95D0D322494C0F0037B176 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95D0D222494C0F0037B176 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5706E661224C3BAD00D4534B /* titanic-icones-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titanic-icones-03.png"; sourceTree = "<group>"; };
 		570943D8224045A000C4C610 /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		570943DB224045A000C4C610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		570943DD224045A000C4C610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		57E8ED1722404C3000BC6842 /* Pessoas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoas.swift; sourceTree = "<group>"; };
 		57E8ED372240642900BC6842 /* SaveLoadPessoasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLoadPessoasViewModel.swift; sourceTree = "<group>"; };
 		57FE13F22243108300389DA4 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		6E86489D224BF0B60069D2DC /* titanic-icones-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titanic-icones-03.png"; sourceTree = "<group>"; };
 		6E8782232246FF6D00B95859 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6E8CADAC2242CEBD004AF3C1 /* AddContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContatoViewController.swift; sourceTree = "<group>"; };
 		6E95D0D222494C0F0037B176 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		570943F0224045BF00C4C610 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6E86489D224BF0B60069D2DC /* titanic-icones-03.png */,
+				5706E661224C3BAD00D4534B /* titanic-icones-03.png */,
 				6E8782232246FF6D00B95859 /* WebViewController.swift */,
 				6E95D0D222494C0F0037B176 /* CollectionViewCell.swift */,
 				570943E7224045A200C4C610 /* LaunchScreen.storyboard */,
@@ -190,7 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E86489E224BF0B70069D2DC /* titanic-icones-03.png in Resources */,
+				5706E662224C3BAD00D4534B /* titanic-icones-03.png in Resources */,
 				5741D26D2249A60700BA903B /* Painel-02.jpg in Resources */,
 				570943E9224045A200C4C610 /* LaunchScreen.storyboard in Resources */,
 				570943E6224045A200C4C610 /* Assets.xcassets in Resources */,
