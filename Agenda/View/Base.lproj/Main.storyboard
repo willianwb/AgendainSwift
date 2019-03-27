@@ -34,7 +34,7 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2vU-dd-cpD">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="245"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Programa realizado para o curso de Capacitacao em IOS, aluno: Willian Wigand Bibow, orientado pelo Professor Fabio Binder. Este programa tem como objetivo salvar contatos dentro do coreData e trabalhar com os mesmo, utilizando collectionView, webView, ImageView e mapView.</string>
                                         <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="I9G-jJ-MAp" secondAttribute="trailing" id="2ga-1N-3HY"/>
                             <constraint firstItem="nlS-gH-bjd" firstAttribute="trailing" secondItem="l7g-rZ-oJM" secondAttribute="trailing" constant="20" id="5tz-b4-R7J"/>
@@ -69,15 +69,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="iuL-p9-jMj">
-                                <rect key="frame" x="0.0" y="234" width="375" height="199"/>
+                                <rect key="frame" x="0.0" y="238.5" width="375" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7R8-5u-BL9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                        <rect key="frame" x="20" y="0.0" width="335" height="53"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="c5L-bZ-dd7">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
-                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
-                                                <state key="normal" title="VER LISTA DE CONTATOS"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="53"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
+                                                <state key="normal" title="VER LISTA DE CONTATOS">
+                                                    <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="GAZ-d9-z3R" kind="show" identifier="ListarPessoas" id="DQC-X9-Nad"/>
                                                 </connections>
@@ -85,12 +93,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MTv-jr-Mc5">
-                                        <rect key="frame" x="128" y="137" width="119" height="62"/>
+                                        <rect key="frame" x="128" y="128" width="119" height="62"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1yL-gq-dvd">
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="62"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
-                                                <state key="normal" title="SOBRE"/>
+                                                <state key="normal" title="SOBRE">
+                                                    <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="01r-44-Hpg" kind="show" id="A0K-N9-jaV"/>
                                                 </connections>
@@ -98,9 +114,13 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="7R8-5u-BL9" firstAttribute="leading" secondItem="iuL-p9-jMj" secondAttribute="leading" constant="20" id="EEy-rB-asZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="7R8-5u-BL9" secondAttribute="trailing" constant="20" id="Rst-mf-HxT"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iuL-p9-jMj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9KX-at-gyU"/>
                             <constraint firstItem="iuL-p9-jMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JCc-bg-Pvk"/>
@@ -122,7 +142,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rio-sM-WfL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableLinhas" id="PS0-a3-VXF">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -202,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="836"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ji-29-1hW" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="836"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="845"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hXK-QF-CkL">
                                                 <rect key="frame" x="20" y="10" width="290" height="409.5"/>
@@ -393,20 +414,26 @@
                                                 </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-8s-61d">
-                                                <rect key="frame" x="35" y="587" width="250" height="188"/>
+                                                <rect key="frame" x="35" y="587" width="250" height="197"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sy-au-kWW">
-                                                        <rect key="frame" x="53.5" y="0.0" width="143" height="30"/>
-                                                        <color key="backgroundColor" red="1" green="0.071446246219999995" blue="0.97446048969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="38.5" y="0.0" width="173" height="39"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                                         <state key="normal" title="ADICIONAR IMAGEM">
                                                             <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="importImage:" destination="LfL-1f-HGM" eventType="touchUpInside" id="P84-JD-uyL"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Painel-02.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q6t-VN-XR0">
-                                                        <rect key="frame" x="0.0" y="38" width="250" height="150"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6t-VN-XR0">
+                                                        <rect key="frame" x="0.0" y="47" width="250" height="150"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="250" id="GSa-oa-UbL"/>
                                                             <constraint firstAttribute="height" constant="150" id="bWz-Id-SCI"/>
@@ -550,19 +577,26 @@
                                                 <rect key="frame" x="10" y="0.0" width="215" height="124"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzD-Co-205">
-                                                <rect key="frame" x="56" y="145" width="123" height="25"/>
-                                                <color key="backgroundColor" red="1" green="0.071446246219999995" blue="0.97446048969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="51" y="145" width="133" height="25"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="lfA-33-Qgg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                                 <state key="normal" title="Adicionar Imagem">
-                                                    <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="importImage:" destination="lch-Ig-3bf" eventType="touchUpInside" id="Yhb-cc-tQc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="VzP-Q6-uZj" firstAttribute="leading" secondItem="m0V-3A-FD7" secondAttribute="leading" constant="10" id="Ux0-yK-cuj"/>
                                             <constraint firstAttribute="trailing" secondItem="VzP-Q6-uZj" secondAttribute="trailing" constant="10" id="VgA-Ha-C97"/>
@@ -793,7 +827,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Painel-02.jpg" width="1755" height="1241"/>
         <image name="titanic-icones-03.png" width="1521" height="1043"/>
     </resources>
 </document>
