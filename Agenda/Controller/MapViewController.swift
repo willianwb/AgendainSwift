@@ -31,9 +31,9 @@ class MapViewController: UIViewController {
         
         let searchRequest = MKLocalSearch.Request()
         let rua : String = self.rua!
-        let numero : String = self.rua!
-        let cep : String = self.numero!
-        let local : String = String("\(rua), \(numero) - CEP:\(cep)")
+        let numero : String = self.numero!
+        let cep : String = self.cep!
+        let local : String = String("\(rua), \(numero), \(cep)")
         searchRequest.naturalLanguageQuery = local
         
         
@@ -63,7 +63,7 @@ class MapViewController: UIViewController {
                 
                 //Zoom
                 let coordenada: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span = MKCoordinateSpan(latitudeDelta: 0.0005, longitudeDelta: 0.0005)
+                let span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
                 let regiao = MKCoordinateRegion(center: coordenada, span: span)
                 self.map.setRegion(regiao, animated: true)
             }
